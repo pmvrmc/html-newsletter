@@ -1,0 +1,38 @@
+{
+  "name": "jsontohtml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p --progress",
+    "dev": "webpack --progress --color --watch & NODE_PATH=. nodemon",
+    "start": "NODE_PATH=. node index.js",
+    "lint": "semistandard --verbose | snazzy"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "@pmvrmc",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.15.2",
+    "babel-register": "^6.18.0",
+    "handlebars": "^4.0.5",
+    "hapi": "^15.2.0",
+    "hapi-react-views": "^9.2.1",
+    "inert": "^4.0.2",
+    "node-uuid": "^1.4.7",
+    "node-zip": "^1.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "vision": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^1.13.3"
+  }
+}

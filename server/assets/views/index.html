@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Awesome Newsletter</title>
+  </head>
+  <body>
+    <h1>{{title}}</h1>
+    <h2>{{subtitle}}</h2>
+
+    {{#each days}}
+      <h1><a href={{url}}>{{name}}</a></h1>
+
+      <h4>To drink:</h4>
+      <h5>{{drink}}</h5>
+
+      <h4>To eat:</h4>
+        {{#each plates}}
+          <h5>{{title}}</h5>
+          <img src={{photo}} />
+          <p>{{subtitle}}</p>
+        {{/each}}
+    {{/each}}
+
+    {{#if fromPT}}
+      {{> fromPT }}
+    {{/if}}
+
+    {{#if fromFriend}}
+      {{> fromFriend }}
+    {{/if}}
+
+    {{#if fromLX}}
+      {{> fromLX }}
+    {{/if}}
+  </body>
+</html>
