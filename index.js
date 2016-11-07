@@ -12,7 +12,7 @@ const server = new Hapi.Server();
 
 server.connection({
   host: '0.0.0.0',
-  port: 8000
+  port: process.env.PORT || 8000
 });
 
 server.register(plugins, (err) => {
