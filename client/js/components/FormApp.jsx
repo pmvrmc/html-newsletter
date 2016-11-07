@@ -60,7 +60,6 @@ export default class FormApp extends React.Component {
       .then((response) => {
         console.log('OK', response.data);
         window.location = window.location.origin + '/' + response.data.filePath;
-        debugger
       })
       .catch((err) => {
         console.log('error', err);
